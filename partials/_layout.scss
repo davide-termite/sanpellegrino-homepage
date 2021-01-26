@@ -1,0 +1,121 @@
+/* Layout Variables */
+$mockup-width: 1440px;
+$content-width: 1280px;
+$columns: 12;
+$gutter: 32px;
+/* End Layout Variables */
+
+/* Grid Template */
+.wrapper {
+  max-width: $mockup-width;
+}
+.container {
+  flex-wrap: wrap;
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: -16px;
+  padding-right: -16px;
+}
+
+.col {
+  display: flex;
+  margin-left: $gutter / 2;
+  margin-right: $gutter / 2;
+}
+
+@media (max-width: 575px) {
+  @for $i from 1 through $columns {
+    .col-sm-#{$i} {
+      width: calc((#{$i} / #{$columns}) * #{$content-width});
+    }
+
+    .col-sm-#{$i}-offset {
+      margin-left: calc((#{$i} / #{$columns}) * #{$content-width});
+    }
+  }
+  .sm-none {
+    display: none;
+  }
+
+  .flex-sm-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .flex-sm-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-sm-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  @for $i from 1 through $columns {
+    .col-md-#{$i} {
+      width: calc((#{$i} / #{$columns}) * #{$content-width});
+    }
+
+    .col-md-#{$i}-offset {
+      margin-left: calc((#{$i} / #{$columns}) * #{$content-width});
+    }
+  }
+
+  .md-none {
+    display: none;
+    flex-direction: row;
+  }
+
+  .flex-md-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .flex-md-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-md-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+@media (min-width: 992px) {
+  @for $i from 1 through $columns {
+    .col-lg-#{$i} {
+      width: calc((#{$i} / #{$columns}) * #{$content-width});
+    }
+
+    .col-lg-#{$i}-offset {
+      margin-left: calc((#{$i} / #{$columns}) * #{$content-width});
+    }
+  }
+
+  .lg-none {
+    display: none;
+  }
+  .flex-lg-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .flex-lg-column {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-lg-row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+/* End Grid Template */

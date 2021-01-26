@@ -1,0 +1,92 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $text-font;
+  font-size: $text-size;
+}
+/* End Reset */
+
+ul {
+  list-style-type: none;
+  font-size: $navbar-link-size;
+}
+
+section {
+  margin-bottom: 15px;
+}
+
+p {
+  color: $text-color;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  font-family: $text-font;
+  text-decoration: none;
+  color: white;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.flex-column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.image {
+  img {
+    width: 100%;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justified {
+  text-align: justify;
+  padding-bottom: 15px;
+}
+
+a.cta {
+  color: #ed1a2e;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all ease-in-out 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.section-title {
+  font-family: $text-font;
+  font-weight: 500;
+  font-size: $text-size;
+  color: $cta-color;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: $title-font;
+  font-size: $title-size;
+  color: $text-color;
+}
