@@ -51,11 +51,13 @@ nav {
   .backbutton::after {
     content: "|";
     padding-left: 5px;
+    font-size: 10px;
   }
   .sitelink {
     &::after {
       content: ">";
       padding-left: 5px;
+      font-size: 10px;
     }
   }
   a {
@@ -91,37 +93,6 @@ section {
     p {
       line-height: 20px;
       font-weight: 300;
-    }
-  }
-}
-
-footer {
-  background-color: $navbar-color;
-  .row {
-    align-items: center;
-  }
-  .logo {
-    padding: 25px;
-  }
-  .logo > img {
-    height: 30px;
-  }
-  .footer-menu {
-    li {
-      padding: 10px 0;
-    }
-    li > a {
-      font-size: 14px;
-      margin-right: 5px;
-      opacity: 0.7;
-      &:hover {
-        opacity: 1;
-        transition: 0.2s;
-      }
-      &:after {
-        padding: 0 10px;
-        content: "|";
-      }
     }
   }
 }
@@ -208,13 +179,48 @@ footer {
   }
 }
 
-// @media (min-width: 992px) and (max-width: 1175px) {
-//   #hero {
-//     .col {
-//       margin-left: 16px !important;
-//     }
-//   }
-// }
+footer {
+  background-color: $navbar-color;
+  .row {
+    align-items: center;
+  }
+  .logo {
+    padding: 25px;
+  }
+  .logo > img {
+    height: 30px;
+  }
+  .footer-menu {
+    li {
+      padding: 20px;
+    }
+    li > a {
+      font-size: 14px;
+      margin-right: 5px;
+      opacity: 0.7;
+      &:hover {
+        opacity: 1;
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  #hero {
+    h4 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1175px) {
+  #hero {
+    .col {
+      margin-left: 16px !important;
+    }
+  }
+}
 
 @media (max-width: 991px) {
   #slider > .top {
